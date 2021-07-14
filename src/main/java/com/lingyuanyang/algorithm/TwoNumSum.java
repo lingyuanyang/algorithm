@@ -11,7 +11,7 @@ public class TwoNumSum {
     public static void main(String[] args) {
         System.out.println(Arrays.toString(solution(new int[]{1, 2, 3, 4, 7, 8}, 6)));
         System.out.println(Arrays.toString(solution1(new int[]{1, 2, 3, 4, 7, 8}, 6)));
-        System.out.println(Arrays.toString(solution2(new int[]{1, 2, 3, 4, 7, 8}, 6)));
+        System.out.println(Arrays.toString(twoSearch(new int[]{1, 2, 3, 4, 7, 8}, 6)));
     }
 
     /*
@@ -51,7 +51,7 @@ public class TwoNumSum {
      * 排序数组
      * 时间复杂度 O(NlogN)
      */
-    private static int[] solution2(int[] nums, int target) {
+    private static int[] twoSearch(int[] nums, int target) {
         int len = nums.length;
         for (int i = 0; i < len; i++) {
             int value = target - nums[i];
@@ -62,11 +62,9 @@ public class TwoNumSum {
                 if (nums[mid] == value) {
                     return new int[]{i, mid};
                 } else if (nums[mid] > value) {
-                    left++;
                     right = mid - 1;
                 } else if (nums[mid] < value) {
                     left = mid + 1;
-                    right--;
                 }
             }
         }

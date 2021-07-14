@@ -12,6 +12,7 @@ public class TwoNumSum {
         System.out.println(Arrays.toString(solution(new int[]{1, 2, 3, 4, 7, 8}, 6)));
         System.out.println(Arrays.toString(solution1(new int[]{1, 2, 3, 4, 7, 8}, 6)));
         System.out.println(Arrays.toString(twoSearch(new int[]{1, 2, 3, 4, 7, 8}, 6)));
+        System.out.println(Arrays.toString(twoPointer(new int[]{1, 2, 3, 4, 7, 8}, 6)));
     }
 
     /*
@@ -69,5 +70,20 @@ public class TwoNumSum {
             }
         }
         return null;
+    }
+
+    private static int[] twoPointer(int[] nums, int target) {
+        int l = 0;
+        int r = nums.length - 1;
+        while (l < r) {
+            if (nums[l] + nums[r] == target) {
+                return new int[]{l, r};
+            } else if (nums[l] + nums[r] < target) {
+                l++;
+            } else {
+                r--;
+            }
+        }
+        return new int[]{0};
     }
 }

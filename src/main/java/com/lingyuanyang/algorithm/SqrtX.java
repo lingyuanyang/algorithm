@@ -38,12 +38,22 @@ public class SqrtX {
         return index;
     }
 
-    //牛顿迭代
+    /*
+     * 牛顿迭代
+     * x = n * n => n+?
+     * x / n = n
+     * (x / n + n) / 2 => n
+     */
     private static int newton(int x) {
-
         return (int) sqrt(x, x);
     }
 
+    /*
+     * 迭代(x / n + n) / 2
+     * x / n 和 n是x的两个乘数
+     * (x / n + n) / 2 更接近于真实的平方根
+     * 通过不断迭代使得n不断趋近于真实的平方根
+     */
     private static double sqrt(double n, int x) {
         double res = (x / n + n) / 2;
         System.out.println("res=" + res);

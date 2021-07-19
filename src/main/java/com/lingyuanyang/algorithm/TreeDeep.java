@@ -1,5 +1,8 @@
 package com.lingyuanyang.algorithm;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class TreeDeep {
     /*
      * 最小深度
@@ -16,11 +19,14 @@ public class TreeDeep {
         TreeNode node3 = new TreeNode(3, node6, null);
         TreeNode node2 = new TreeNode(2, node4, node5);
         TreeNode node1 = new TreeNode(1, node2, node3);
-        System.out.println(minDepth(node1));
+        System.out.println(minDepth2(node1));
     }
 
     /*
      * 递归
+     * 深度优先
+     * 时间复杂度O(N)
+     * 空间复杂度O(logN)，取决是树的高度
      */
     private static int minDepth(TreeNode root) {
         if (root == null) {
@@ -42,10 +48,42 @@ public class TreeDeep {
         return min + 1;
     }
 
+    /*
+     * 递归
+     * 广度优先
+     * 借用队列queue存储
+     * 时间复杂度O(N)
+     * 空间复杂度O(N)
+     */
+    private static int minDepth2(TreeNode root) {
+        if (root == null) {
+            return 0;
+        }
+        Queue<TreeNode> queue = new LinkedList<TreeNode>();
+        root.deep = 1;
+        queue.offer(root);
+        while (!queue.isEmpty()) {
+            TreeNode node = queue.poll();
+            if (node.left == null && node.right == null) {
+                return node.deep;
+            }
+            if (node.left != null) {
+                node.left.deep = node.deep + 1;
+                queue.offer(node.left);
+            }
+            if (node.right != null) {
+                node.right.deep = node.deep + 1;
+                queue.offer(node.right);
+            }
+        }
+        return 0;
+    }
+
     public static class TreeNode {
         int val;
         TreeNode right;
         TreeNode left;
+        int deep;
 
         public TreeNode(int val, TreeNode right, TreeNode left) {
             this.val = val;

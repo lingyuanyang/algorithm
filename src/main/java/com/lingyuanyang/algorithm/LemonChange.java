@@ -1,6 +1,6 @@
 package com.lingyuanyang.algorithm;
 
-public class lemonChange {
+public class LemonChange {
     /*
      * 贪心算法的使用场景 -> 柠檬水找零
      */

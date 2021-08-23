@@ -1,4 +1,4 @@
-package com.lingyuanyang.algorithm;
+package com.lingyuanyang.algorithm.tuling;
 
 import java.util.HashSet;
 import java.util.Set;

@@ -1,8 +1,9 @@
 package com.lingyuanyang.algorithm.leetcode;
 
 public class ReverseVowelsInString {
-
-
+    /*
+     * 编写一个函数，以字符串作为输入，反转该字符串中的元音字母。
+     */
     public static void main(String[] args) {
         String s = "leetcode";
         System.out.println(reverseVowels(s));

@@ -1,4 +1,4 @@
-package com.lingyuanyang.algorithm;
+package com.lingyuanyang.algorithm.tuling;
 
 public class ReverseList {
 

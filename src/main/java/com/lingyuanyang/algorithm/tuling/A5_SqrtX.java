@@ -1,14 +1,20 @@
 package com.lingyuanyang.algorithm.tuling;
 
-public class SqrtX {
+public class A5_SqrtX {
 
+    /*
+     * 5.x的平方根
+     * 在不使用sqrt(x)函数的情况下，得到x的平方根的整数部分
+     */
     public static void main(String[] args) {
         int num = 567;
         System.out.println("求得值：" + newton(num));
         System.out.println("真实值：" + Math.sqrt(num));
     }
 
-    // 暴力求解 O(n)
+    /*
+     * 解法一：暴力求解 O(n)
+     */
     private static int binarySearch1(int x) {
         if (x < 2) {
             return x;
@@ -21,7 +27,9 @@ public class SqrtX {
         return 0;
     }
 
-    //二分法
+    /*
+     * 解法二：二分法
+     */
     private static int binarySearch2(int x) {
         int index = -1;
         int left = 0;
@@ -39,7 +47,7 @@ public class SqrtX {
     }
 
     /*
-     * 牛顿迭代
+     * 解法三：牛顿迭代
      * x = n * n => n+?
      * x / n = n
      * (x / n + n) / 2 => n

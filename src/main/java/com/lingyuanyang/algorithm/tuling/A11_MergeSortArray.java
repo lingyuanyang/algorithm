@@ -2,9 +2,9 @@ package com.lingyuanyang.algorithm.tuling;
 
 import java.util.Arrays;
 
-public class MergeSortArray {
+public class A11_MergeSortArray {
     /*
-     * 合并两个有序数组
+     * 11.合并两个有序数组
      * 注意：返回nums1，不是新数组
      */
     public static void main(String[] args) {
@@ -17,6 +17,7 @@ public class MergeSortArray {
     }
 
     /*
+     * 解法一：利用System.arraycopy
      * 时间复杂度O(NlogN)
      * 空间复杂度O(1)
      */
@@ -27,7 +28,7 @@ public class MergeSortArray {
     }
 
     /*
-     * 双指针
+     * 解法二：双指针
      * 时间复杂度O(N)
      * 空间复杂度O(N)
      */
@@ -50,7 +51,7 @@ public class MergeSortArray {
     }
 
     /*
-     * 双指针
+     * 解法三：双指针
      * 时间复杂度O(M+N)
      * 空间复杂度O(N)
      */
@@ -73,6 +74,7 @@ public class MergeSortArray {
     }
 
     /*
+     * 解法四
      * 时间复杂度O(M+N)
      * 空间复杂度O(N)
      */

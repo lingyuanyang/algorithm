@@ -3,7 +3,7 @@ package com.lingyuanyang.algorithm.tuling;
 public class A5_SqrtX {
 
     /*
-     * 5.x的平方根
+     * 5.求x的平方根
      * 在不使用sqrt(x)函数的情况下，得到x的平方根的整数部分
      */
     public static void main(String[] args) {

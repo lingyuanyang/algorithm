@@ -4,19 +4,24 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
-public class TwoNumSum {
+public class A7_TwoNumSum {
     /*
-     * 在一个数组中找出两个数的下标，保证该两数的和为目标值
+     * 7.在一个数组中找出两个数的下标，保证该两数的和为目标值
+     * 两种情况：
+     * (1).无序数组
+     * (2).有序数组(升序)
      */
     public static void main(String[] args) {
+        //无序数组
         System.out.println(Arrays.toString(solution(new int[]{1, 2, 3, 4, 7, 8}, 6)));
         System.out.println(Arrays.toString(solution1(new int[]{1, 2, 3, 4, 7, 8}, 6)));
+        //有序数组
         System.out.println(Arrays.toString(twoSearch(new int[]{1, 2, 3, 4, 7, 8}, 6)));
         System.out.println(Arrays.toString(twoPointer(new int[]{1, 2, 3, 4, 7, 8}, 6)));
     }
 
     /*
-     * 暴力循环
+     * 解法一：暴力循环 - 无序数组
      * 时间复杂度 O(N2)
      */
     private static int[] solution(int[] nums, int target) {
@@ -32,7 +37,7 @@ public class TwoNumSum {
     }
 
     /*
-     * 优化
+     * 解法二：利用HashMap的containsKey - 无序数组
      * 时间复杂度 O(N)
      */
     private static int[] solution1(int[] nums, int target) {
@@ -49,7 +54,7 @@ public class TwoNumSum {
 
 
     /*
-     * 排序数组
+     * 解法三：排序数组
      * 时间复杂度 O(NlogN)
      */
     private static int[] twoSearch(int[] nums, int target) {
@@ -72,6 +77,9 @@ public class TwoNumSum {
         return null;
     }
 
+    /*
+     * 解法四：双指针 - 有序数组
+     */
     private static int[] twoPointer(int[] nums, int target) {
         int l = 0;
         int r = nums.length - 1;

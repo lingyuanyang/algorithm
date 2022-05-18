@@ -1,8 +1,9 @@
 package com.lingyuanyang.algorithm.tuling;
 
-public class Fibonacci {
+public class A8_Fibonacci {
 
     /*
+     * 8.求取Fibonacci数列第N位的值
      * 1 2 3 4 5 6 7 8
      * 1 1 2 3 5 8 13 21
      */
@@ -13,7 +14,7 @@ public class Fibonacci {
     }
 
     /*
-     * 递归
+     * 解法一：递归
      * 时间复杂度O(N)
      */
     private static long calculate(int x) {
@@ -27,7 +28,7 @@ public class Fibonacci {
     }
 
     /*
-     * 去重递归
+     * 解法二：去重递归
      * 时间复杂度O(N)
      */
     private static long calculate2(int x) {
@@ -50,7 +51,7 @@ public class Fibonacci {
     }
 
     /*
-     * 双指针迭代
+     * 解法三：双指针迭代
      * 时间复杂度O(N)
      */
     private static long iterate(int x) {

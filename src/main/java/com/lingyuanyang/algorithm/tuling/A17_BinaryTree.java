@@ -2,9 +2,9 @@ package com.lingyuanyang.algorithm.tuling;
 
 import java.util.*;
 
-public class BinaryTree {
+public class A17_BinaryTree {
     /*
-     * 二叉树遍历
+     * 14.二叉树遍历
      *       1
      *     2   3
      *   4  5

@@ -1,8 +1,10 @@
 package com.lingyuanyang.algorithm.tuling;
 
-public class MaxSeq {
+public class A14_MaxSeq {
     /*
-     * 贪心算法的使用场景 -> 非排序数组中的最大连续升序数组
+     * 14.贪心算法的使用场景一 -> 最长连续递增序列
+     *
+     * 非排序数组中的最大连续升序数组,并返回该长度
      */
     public static void main(String[] args) {
         System.out.println(findLength(new int[]{1, 2, 3, 2, 3, 4, 3, 4, 5, 6, 7}));

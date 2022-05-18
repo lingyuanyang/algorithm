@@ -3,7 +3,7 @@ package com.lingyuanyang.algorithm.tuling;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class GroupMerge {
+public class A18_GroupMerge {
     public static void main(String[] args) {
         System.out.println(getProvinceDfs(new int[][]{{1, 1, 0}, {1, 1, 0}, {0, 0, 1}}));
         System.out.println(getProvinceDfs(new int[][]{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}}));

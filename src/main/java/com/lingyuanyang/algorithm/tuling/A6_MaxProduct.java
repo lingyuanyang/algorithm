@@ -2,9 +2,10 @@ package com.lingyuanyang.algorithm.tuling;
 
 import java.util.Arrays;
 
-public class MaxProduct {
+public class A6_MaxProduct {
     /*
-     * 在一个整数数组中找出三个数组相乘的最大乘积
+     * 6.在一个整数数组中找出三个数相乘的最大乘积(乘积不会超过最大int值)
+     * 重点考察：线性扫描
      */
     public static void main(String[] args) {
         System.out.println(sort(new int[]{-2, -10, -3, -7, -10, -4, -10, 1}));
@@ -12,7 +13,7 @@ public class MaxProduct {
     }
 
     /*
-     * 线性扫描
+     * 解法一：线性扫描
      */
     private static int getMaxMin(int[] nums) {
         int min1 = Integer.MAX_VALUE;
@@ -43,11 +44,13 @@ public class MaxProduct {
     }
 
     /*
-     * 排序
+     * 解法二：排序
+     * Arrays.sort(nums)
      */
     private static int sort(int[] nums) {
         Arrays.sort(nums);
         int n = nums.length;
+        //返回 最大三个正数 和 两个负数和一个最大整数 的最大值
         return Math.max(nums[n - 1] * nums[n - 2] * nums[n - 3], nums[0] * nums[1] * nums[n - 1]);
     }
 }

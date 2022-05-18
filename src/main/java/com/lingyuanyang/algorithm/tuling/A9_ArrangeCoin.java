@@ -1,7 +1,12 @@
 package com.lingyuanyang.algorithm.tuling;
 
-public class ArrangeCoin {
+public class A9_ArrangeCoin {
 
+    /*
+     * 9.排列硬币
+     * 总共有n枚硬币，第k行必须刚好有k枚硬币
+     * 给定一个数字n，求出可形成完整梯形行的总行数
+     */
     public static void main(String[] args) {
 //        System.out.println(arrangeCoins(1000));
 //        System.out.println(arrangeCoins1(1000));
@@ -11,7 +16,7 @@ public class ArrangeCoin {
     }
 
     /*
-     * 迭代
+     * 解法一：迭代一
      */
     private static int arrangeCoins(int x) {
         int count = 0;
@@ -23,6 +28,9 @@ public class ArrangeCoin {
         }
     }
 
+    /*
+     * 解法二：迭代二
+     */
     private static int arrangeCoins1(int x) {
         for (int i = 1; ; i++) {
             x = x - i;
@@ -32,6 +40,9 @@ public class ArrangeCoin {
         }
     }
 
+    /*
+     * 解法三：迭代三
+     */
     private static int arrangeCoins2(int x) {
         for (int i = 1; ; i++) {
             if ((1 + i) * i / 2 > x) {
@@ -41,7 +52,7 @@ public class ArrangeCoin {
     }
 
     /*
-     * 二分法
+     * 解法四：二分法
      */
     private static int arrangeCoins3(int x) {
         int low = 0;
@@ -61,7 +72,7 @@ public class ArrangeCoin {
     }
 
     /*
-     * 牛顿迭代
+     * 解法五：牛顿迭代
      * 实质为求取 （1 + n）* n / 2 = x 中的n的问题
      * 2x = n * n + n
      * 2x - n = n * n

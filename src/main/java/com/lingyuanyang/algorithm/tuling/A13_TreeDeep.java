@@ -3,9 +3,9 @@ package com.lingyuanyang.algorithm.tuling;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class TreeDeep {
+public class A13_TreeDeep {
     /*
-     * 最小深度
+     * 13.二叉树的最小深度
      *                 1
      *            2          3
      *        4      5         6
@@ -23,8 +23,7 @@ public class TreeDeep {
     }
 
     /*
-     * 递归
-     * 深度优先
+     * 解法一：递归 - 深度优先
      * 时间复杂度O(N)
      * 空间复杂度O(logN)，取决是树的高度
      */
@@ -49,8 +48,7 @@ public class TreeDeep {
     }
 
     /*
-     * 递归
-     * 广度优先
+     * 解法一：递归 - 广度优先
      * 借用队列queue存储
      * 时间复杂度O(N)
      * 空间复杂度O(N)
@@ -79,6 +77,9 @@ public class TreeDeep {
         return 0;
     }
 
+    /*
+     * 数据结构 TreeNode
+     */
     public static class TreeNode {
         int val;
         TreeNode right;
